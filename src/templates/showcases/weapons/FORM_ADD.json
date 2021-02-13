@@ -1,0 +1,76 @@
+{
+  "label": "Добавиь вооружение",
+  "width": "25%",
+  "sections": [
+    {
+      "label": "Общая информация",
+      "grid": [
+        [
+          {
+            "label": "Наименование",
+            "key": "NAME",
+            "name": "Input",
+            "width": 12,
+            "config": {
+              "disabled": false,
+              "required": true
+            }
+          }
+        ],
+        [
+          {
+            "label": "Индекс",
+            "key": "INDEX",
+            "name": "Input",
+            "width": 12,
+            "config": {
+              "disabled": false,
+              "required": true
+            }
+          }
+        ],
+        [
+          {
+            "label": "Кол-во патронов в комплекте",
+            "key": "BULLETS_COUNT",
+            "name": "Input",
+            "width": 12,
+            "config": {
+              "disabled": false,
+              "required": true
+            }
+          }
+        ],
+        [
+          {
+            "label": "Дата покупки",
+            "key": "DATE_OF_PURCHASE",
+            "name": "Input",
+            "width": 12,
+            "config": {
+              "disabled": false,
+              "required": true
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "label": "История оружия",
+      "grid": [
+        [
+          {
+            "label": "Наименование",
+            "key": "NAME",
+            "name": "Input",
+            "width": 12,
+            "config": {
+              "disabled": true,
+              "required": false
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}

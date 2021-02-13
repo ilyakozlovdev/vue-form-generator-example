@@ -1,0 +1,23 @@
+[
+  {
+    "ID": "1",
+    "NAME": "АК-47",
+    "INDEX": "AK47/154F0Y3",
+    "BULLETS_COUNT": 200,
+    "DATE_OF_PURCHASE": "14-02-19"
+  },
+  {
+    "ID": "2",
+    "NAME": "m4a4",
+    "INDEX": "m4a4/1123YY3",
+    "BULLETS_COUNT": 300,
+    "DATE_OF_PURCHASE": "15-01-18"
+  },
+  {
+  "ID": "3",
+  "NAME": "m16-s",
+  "INDEX": "m16-s/3A123Y3",
+  "BULLETS_COUNT": 200,
+  "DATE_OF_PURCHASE": "05-10-20"
+  }
+]

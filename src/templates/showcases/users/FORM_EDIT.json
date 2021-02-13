@@ -1,0 +1,59 @@
+{
+  "label": "Изменить пользователя",
+  "width": "25%",
+  "sections": [
+    {
+      "label": "Общая информация",
+      "grid": [
+        [
+          {
+            "label": "Имя",
+            "key": "NAME",
+            "name": "Input",
+            "width": 12,
+            "config": {
+              "disabled": false,
+              "required": true
+            }
+          }
+        ],
+        [
+          {
+            "label": "Табельное оружие",
+            "key": "INDEX",
+            "name": "Input",
+            "width": 12,
+            "config": {
+              "disabled": false,
+              "required": true
+            }
+          }
+        ],
+        [
+          {
+            "label": "Заработная плата в долларах",
+            "key": "BULLETS_COUNT",
+            "name": "Input",
+            "width": 12,
+            "config": {
+              "disabled": false,
+              "required": true
+            }
+          }
+        ],
+        [
+          {
+            "label": "Дата прихода на работу",
+            "key": "DATE_OF_PURCHASE",
+            "name": "Input",
+            "width": 12,
+            "config": {
+              "disabled": false,
+              "required": true
+            }
+          }
+        ]
+      ]
+    }
+  ]
+}
