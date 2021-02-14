@@ -28,18 +28,18 @@
       }
     },
     {
-      "label": "Что то еще",
+      "label": "Вместе с ID и в другом порядке",
       "name": "Table",
       "tabName": "something-else",
       "settings": {
         "columns": [
           {
-            "label": "Имя",
-            "key": "NAME"
+            "label": "ID",
+            "key": "ID"
           },
           {
-            "label": "Серийный номер",
-            "key": "INDEX"
+            "label": "Имя",
+            "key": "NAME"
           },
           {
             "label": "Количество патронов",
@@ -48,6 +48,10 @@
           {
             "label": "Дата покупки",
             "key": "DATE_OF_PURCHASE"
+          },
+          {
+            "label": "Серийный номер",
+            "key": "INDEX"
           }
         ]
       }

@@ -27,20 +27,16 @@
           <v-divider></v-divider>
 
           <v-list nav dense style="text-decoration: none">
-            <router-link to="/weapons/list">
+            <router-link
+              v-for="route in routes"
+              :key="route.label"
+              :to="route.path"
+            >
               <v-list-item link>
                 <v-list-item-icon>
-                  <v-icon>mdi-folder</v-icon>
+                  <v-icon>{{ route.icon }}</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>Weapons</v-list-item-title>
-              </v-list-item>
-            </router-link>
-            <router-link to="/users/list">
-              <v-list-item link>
-                <v-list-item-icon>
-                  <v-icon>mdi-account-multiple</v-icon>
-                </v-list-item-icon>
-                <v-list-item-title>Users</v-list-item-title>
+                <v-list-item-title>{{ route.label }}</v-list-item-title>
               </v-list-item>
             </router-link>
           </v-list>
@@ -64,7 +60,12 @@ export default {
     ],
     links: ["Home", "Contacts", "Settings"],
     mini: true
-  })
+  }),
+  computed: {
+    routes() {
+      return require("./router/routes.json");
+    }
+  }
 };
 </script>
 

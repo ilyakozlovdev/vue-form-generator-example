@@ -3,21 +3,21 @@
     "ID": "1",
     "NAME": "Ilya Kozlov",
     "INDEX": "ik9700",
-    "BULLETS_COUNT": 200,
+    "MONTH_SALARY": 300000,
     "DATE_OF_PURCHASE": "14-02-19"
   },
   {
     "ID": "2",
     "NAME": "Julia Bev",
     "INDEX": "jb9700",
-    "BULLETS_COUNT": 300,
+    "MONTH_SALARY": 300000,
     "DATE_OF_PURCHASE": "15-01-18"
   },
   {
     "ID": "3",
     "NAME": "Holo Hanz",
     "INDEX": "hh/3A123Y3",
-    "BULLETS_COUNT": 200,
+    "MONTH_SALARY": 300000,
     "DATE_OF_PURCHASE": "05-10-20"
   }
 ]

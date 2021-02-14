@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Вооружение",
+    "path": "/weapons/list",
+    "icon": "mdi-pistol"
+  },
+  {
+    "label": "Пользователи",
+    "path": "/users/list",
+    "icon": "mdi-account-details"
+  },
+  {
+    "label": "Словарь слов",
+    "path": "/words",
+    "icon": "mdi-book-open-variant"
+  }
+]

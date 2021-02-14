@@ -1,0 +1,31 @@
+{
+  "label": "Словарь слов",
+  "showTabs": false,
+  "tabs": [
+    {
+      "label": "В целом неважно что тут",
+      "tabName": "тут тоже неважно",
+      "name": "Table",
+      "settings": {
+        "columns": [
+          {
+            "label": "Слово",
+            "key": "WORD"
+          },
+          {
+            "label": "Объяснение",
+            "key": "DESCRIPTION"
+          },
+          {
+            "label": "Количество упоминаний",
+            "key": "COUNT"
+          },
+          {
+            "label": "Дата последнего употребления",
+            "key": "DATE"
+          }
+        ]
+      }
+    }
+  ]
+}

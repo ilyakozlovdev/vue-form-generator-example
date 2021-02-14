@@ -7,12 +7,16 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/:showcaseName/:tab",
+    path: "/",
+    component: Welcome
+  },
+  {
+    path: "/:showcaseName",
     component: Showcase
   },
   {
-    path: "/",
-    component: Welcome
+    path: "/:showcaseName/:tab",
+    component: Showcase
   }
 ];
 

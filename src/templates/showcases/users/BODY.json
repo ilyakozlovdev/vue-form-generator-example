@@ -1,9 +1,9 @@
 {
-  "label": "Вооружение",
+  "label": "Пользователи",
   "showTabs": true,
   "tabs": [
     {
-      "label": "Список вооружения",
+      "label": "Список пользователей",
       "tabName": "list",
       "name": "Table",
       "settings": {

@@ -32,7 +32,7 @@
         [
           {
             "label": "Заработная плата в долларах",
-            "key": "BULLETS_COUNT",
+            "key": "MONTH_SALARY",
             "name": "Input",
             "width": 12,
             "config": {

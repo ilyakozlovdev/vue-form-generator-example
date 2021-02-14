@@ -1,6 +1,9 @@
 <template>
   <div class="showcase-view">
     <v-app-bar dense elevation="1">
+      <h3 style="margin-right: 14px">
+        {{ this.body.label }}
+      </h3>
       <v-tabs :value="showcaseTab" v-if="showTabs">
         <v-tab
           :to="tab.tabName"
@@ -16,7 +19,12 @@
       </v-btn>
     </v-app-bar>
     <div class="showcase-tab">
-      {{ JSON.stringify(tabs[activeTabIdx]) }}
+      <div class="showcase-tab__substrate">
+        <Table
+          :columns="body.tabs[this.activeTabIdx].settings.columns"
+          :data="[...tableData]"
+        />
+      </div>
     </div>
     <SidebarForm
       v-model="sidebar"
@@ -29,21 +37,26 @@
 
 <script>
 import SidebarForm from "@/components/sidebar-form";
+import Table from "@/components/table";
 export default {
   name: "Showcase",
-  components: { SidebarForm },
+  components: { Table, SidebarForm },
   data: () => ({
     activeTabIdx: 0,
     sidebar: false,
     formTemplate: {},
-    formData: {}
+    formData: {},
+    tableData: []
   }),
   computed: {
     body() {
-      return require(`../../templates/showcases/${this.$route.params.showcaseName}/BODY.json`);
+      return require(`../../templates/showcases/${this.showcaseName}/BODY.json`);
+    },
+    showcaseName() {
+      return this.$route.params.showcaseName;
     },
     showcaseTab() {
-      return this.$route.params.tab;
+      return this.$route.params.tab || "";
     },
     showTabs() {
       return this.body.showTabs;
@@ -53,8 +66,9 @@ export default {
     }
   },
   watch: {
-    body() {
-      console.log(this.tabs[this.activeTabIdx]);
+    body(v) {
+      this.tableData = this.getTableData();
+      console.log(v.tabs[this.activeTabIdx]);
     }
   },
   methods: {
@@ -71,7 +85,7 @@ export default {
         return;
       }
       this.formData = newFormData;
-      this.formTemplate = require(`../../templates/showcases/${this.$route.params.showcaseName}/FORM_${mode}.json`);
+      this.formTemplate = require(`../../templates/showcases/${this.showcaseName}/FORM_${mode}.json`);
       this.sidebar = true;
     },
     getFormData(id) {
@@ -79,10 +93,14 @@ export default {
         // create empty form
         return;
       }
-      const data = require(`../../data/${this.$route.params.showcaseName}.json`).find(
+      const data = require(`../../data/${this.showcaseName}.json`).find(
         el => el.ID === "" + id
       ); // только для примера, в настоящем проекте данные будут запрашиваться с сервера
       console.log(data);
+      return data;
+    },
+    getTableData() {
+      const data = require(`../../data/${this.showcaseName}.json`); // только для примера, в настоящем проекте данные будут запрашиваться с сервера
       return data;
     },
     editFormData(key, value) {
@@ -103,6 +121,14 @@ export default {
     width: 100%;
     height: calc(100% - 48px);
     overflow-y: scroll;
+    background: #fafafa;
+
+    .showcase-tab__substrate {
+      height: 100%;
+      width: 100%;
+      background: white;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
   }
 }
 </style>

@@ -1,5 +1,5 @@
 {
-  "label": "Добавить пользователя",
+  "label": "Добавиь слово",
   "width": "25%",
   "sections": [
     {
@@ -7,48 +7,48 @@
       "grid": [
         [
           {
-            "label": "Имя",
-            "key": "NAME",
+            "label": "Слово",
+            "key": "WORD",
             "name": "Input",
             "width": 12,
             "config": {
-              "disabled": false,
+              "disabled": true,
               "required": true
             }
           }
         ],
         [
           {
-            "label": "Табельное оружие",
-            "key": "INDEX",
+            "label": "Объяснение",
+            "key": "DESCRIPTION",
             "name": "Input",
             "width": 12,
             "config": {
-              "disabled": false,
+              "disabled": true,
               "required": true
             }
           }
         ],
         [
           {
-            "label": "Заработная плата в долларах",
-            "key": "MONTH_SALARY",
+            "label": "Количество упоминаний",
+            "key": "COUNT",
             "name": "Input",
             "width": 12,
             "config": {
-              "disabled": false,
+              "disabled": true,
               "required": true
             }
           }
         ],
         [
           {
-            "label": "Дата прихода на работу",
-            "key": "DATE_OF_PURCHASE",
+            "label": "Дата последнего употребления",
+            "key": "DATE",
             "name": "Input",
             "width": 12,
             "config": {
-              "disabled": false,
+              "disabled": true,
               "required": true
             }
           }
