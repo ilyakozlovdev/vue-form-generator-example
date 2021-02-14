@@ -67,9 +67,14 @@ export default {
   },
   watch: {
     body(v) {
-      this.tableData = this.getTableData();
       console.log(v.tabs[this.activeTabIdx]);
     }
+  },
+  mounted() {
+    this.tableData = this.getTableData();
+  },
+  updated() {
+    this.tableData = this.getTableData();
   },
   methods: {
     logger(...data) {
